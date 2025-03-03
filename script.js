@@ -32,8 +32,16 @@ function updateIngrediënten() {
 
     let starter = recept["Starter"] * deegHoeveelheid / 1000;
 
+    var totaal = 0;
+
     for (let ingredient in recept) {
-        const hoeveelheid = (recept[ingredient] * deegHoeveelheid) / 1000;
+        totaal = totaal + recept[ingredient];
+    }    
+
+    const deegfactor = totaal/deegHoeveelheid;
+    
+    for (let ingredient in recept) {
+        const hoeveelheid = recept[ingredient] * deegfactor);
         if (hoeveelheid > 0) {
             let li = document.createElement("li");
             li.textContent = `${ingredient}: ${hoeveelheid.toFixed(1)} gram`;
