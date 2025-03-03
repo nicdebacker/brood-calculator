@@ -62,25 +62,25 @@
     <!-- Main content -->
     <div class="container">
 
-        <h1 class="center-align">Brood Recepten Calculator</h1>
+        <h1 class="center-align">Calculator Deeg</h1>
 
         <!-- Input Section -->
-        <div class="section">
+       <div class="section">
             <div class="card">
                 <div class="card-content">
                     <h5>Invoer</h5>
-
-                    <!-- Dropdown voor broodtype -->
+        
+                    <!-- Dropdown voor broodtype met label erboven -->
                     <div class="input-field">
+                        <label for="broodType">Kies het type brood:</label>
                         <select id="broodType" class="browser-default">
                             <option value="Wit">Wit</option>
                             <option value="Rogge">Rogge</option>
                             <!-- Voeg hier andere broodtypes toe -->
                         </select>
-                        <label for="broodType">Kies het type brood:</label>
                     </div>
-
-                    <!-- Slider voor hoeveelheid deeg -->
+        
+                    <!-- Slider voor hoeveelheid deeg met label erboven -->
                     <div class="input-field">
                         <label for="deegHoeveelheid">Hoeveelheid deeg (gram):</label>
                         <input type="range" id="deegHoeveelheid" min="1250" max="4500" value="1250" step="100" />
@@ -89,6 +89,7 @@
                 </div>
             </div>
         </div>
+
 
         <!-- Output Section -->
         <div class="output-section">
