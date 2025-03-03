@@ -34,12 +34,14 @@ function updateIngrediënten() {
 
     var totaal = 0;
 
+    // Calculate the total sum of ingredients for scaling
     for (let ingredient in recept) {
         totaal = totaal + recept[ingredient];
     }    
 
     const deegfactor = totaal / deegHoeveelheid;
     
+    // Calculate and display the ingredients
     for (let ingredient in recept) {
         const hoeveelheid = recept[ingredient] * deegfactor;
         if (hoeveelheid > 0) {
@@ -49,7 +51,7 @@ function updateIngrediënten() {
         }
     }
 
-    // Bereken en toon de starter
+    // Calculate and show the starter amount for 1x and 2x feeding
     const starter1x = starter * 2.5;
     const starter2x = starter / (2.5 * 2.5);
 
