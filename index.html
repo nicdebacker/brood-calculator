@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brood Recepten Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Brood Recepten Calculator</h1>
+
+        <!-- Dropdown voor broodtype -->
+        <label for="broodType">Kies het type brood:</label>
+        <select id="broodType">
+            <option value="Wit">Wit</option>
+            <option value="Rogge">Rogge</option>
+            <!-- Voeg hier andere broodtypes toe -->
+        </select>
+
+        <!-- Slider voor hoeveelheid deeg -->
+        <label for="deegHoeveelheid">Hoeveelheid deeg (gram):</label>
+        <input type="range" id="deegHoeveelheid" min="1250" max="4500" value="1250">
+        <span id="deegWaarde">1250g</span>
+
+        <!-- Resultaten van de berekeningen -->
+        <h3>Ingrediënten:</h3>
+        <ul id="ingredientenLijst"></ul>
+
+        <h3>Starter:</h3>
+        <p id="starter1x"></p>
+        <p id="starter2x"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
