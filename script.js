@@ -26,6 +26,7 @@ function updateIngrediënten() {
     const deegHoeveelheid = parseInt(document.getElementById("deegHoeveelheid").value);
     
     const recept = receptenData[broodType];
+    console.log(recept);  // Debug: Check if recipe data is correct
     
     const ingredientenLijst = document.getElementById("ingredientenLijst");
     ingredientenLijst.innerHTML = '';  // Maak de lijst leeg
@@ -37,13 +38,17 @@ function updateIngrediënten() {
     // Calculate the total sum of ingredients for scaling
     for (let ingredient in recept) {
         totaal = totaal + recept[ingredient];
-    }    
-
+    }
+    console.log("Total ingredient amount: ", totaal);  // Debug: Check if total sum is correct
+    
     const deegfactor = totaal / deegHoeveelheid;
+    console.log("Deegfactor: ", deegfactor);  // Debug: Check if deegfactor is correct
     
     // Calculate and display the ingredients
     for (let ingredient in recept) {
         const hoeveelheid = recept[ingredient] * deegfactor;
+        console.log(`${ingredient}: ${hoeveelheid}`);  // Debug: Check the ingredient calculation
+        
         if (hoeveelheid > 0) {
             let li = document.createElement("li");
             li.textContent = `${ingredient}: ${hoeveelheid.toFixed(1)} gram`;
